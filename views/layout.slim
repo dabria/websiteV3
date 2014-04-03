@@ -26,3 +26,9 @@ html
 
     ga('create', 'UA-49659451-1', 'melissapage.ca');
     ga('send', 'pageview');
+
+    $(function() {
+        if ($.browser.msie) {
+        $('.modal').removeClass('fade');
+        }
+    });
