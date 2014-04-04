@@ -16,7 +16,15 @@ html
     script(src="js/jquery.js")
     script(src="js/main.js")
   body
-    == yield
+    .IEsucks
+      img(src="http://i.pgu.me/7Myrlgsq_original.png")
+      .text
+        h1 Hold it right there!
+        p I noticed you're using Internet Explorer. 
+        p I'm afraid my site isn't optimized for your browser. My site is best viewed in Firefox, Chrome, or Safari.
+        h5 Consider upgrading today!
+    .everything
+      == yield
 
   javascript:
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -27,8 +35,41 @@ html
     ga('create', 'UA-49659451-1', 'melissapage.ca');
     ga('send', 'pageview');
 
-    $(function() {
-        if ($.browser.msie) {
-        $('.modal').removeClass('fade');
+
+    var IE = (function () {
+        "use strict";
+
+        var ret, isTheBrowser,
+            actualVersion,
+            jscriptMap, jscriptVersion;
+
+        isTheBrowser = false;
+        jscriptMap = {
+            "5.5": "5.5",
+            "5.6": "6",
+            "5.7": "7",
+            "5.8": "8",
+            "9": "9",
+            "10": "10"
+        };
+        jscriptVersion = new Function("/*@cc_on return @_jscript_version; @*/")();
+
+        if (jscriptVersion !== undefined) {
+            isTheBrowser = true;
+            actualVersion = jscriptMap[jscriptVersion];
         }
-    });
+
+        ret = {
+            isTheBrowser: isTheBrowser,
+            actualVersion: actualVersion
+        };
+
+        return ret;
+    }());
+
+    $('.IEsucks').hide();
+
+    if (IE.isTheBrowser) {
+        $('.IEsucks').show();
+        $('.everything').hide();
+    }
