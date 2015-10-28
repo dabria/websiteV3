@@ -18,28 +18,48 @@
       h4 &#32; Tablet
       i.fa.fa-mobile.device.spacer
       h4 &#32; Mobile
-      ul.small-block-grid-4.sites
-        li
+      dl.small-block-grid-4.sites
+        .gallery
+          a(href="#openModal5")
+            img.preview.glow(src="img/db1_thumb.jpg" alt="Downbeat preview")
+          .webcaption
+            a(href="#openModal5")Downbeat Technologies
+        .gallery
           a(href="#openModal1")
             img.preview.glow(src="http://i.pgu.me/owWqrsVK_original.png" alt="Bakery site preview")
-        li
+          .webcaption
+            a(href="#openModal1")Generic Bakery Shop
+        .gallery
           a(href="#openModal2")
             img.preview.glow(src="http://i.pgu.me/7ecoaIRY_original.png" alt="pgu.me preview")
-        li
+          .webcaption
+            a(href="#openModal2")PGU.me
+        .gallery
           a(href="#openModal3")
             img.preview.glow(src="http://i.pgu.me/L-gintBn_original.png" alt="My site v2 preview")
-        li
+          .webcaption
+            a(href="#openModal3")MelissaPage.ca V2
+        .gallery
           a(href="#openModal4")
             img.preview.glow(src="http://i.pgu.me/PD33S-_5_original.png" alt="My site v1 preview")
-      ul.small-block-grid-4.sites-caption
-        li
-          a(href="#openModal1")Generic Bakery Shop
-        li
-          a(href="#openModal2")PGU.me
-        li
-          a(href="#openModal3")MelissaPage.ca V2
-        li
-          a(href="#openModal4")MelissaPage.ca V1
+          .webcaption
+            a(href="#openModal4")MelissaPage.ca V1
+      div.modalDialog#openModal5
+        div
+          a.close(href="#close")x
+          h4 Downbeat Technologies
+          p A simple and clean site for the finished project of some friends.
+          p.hint &#40;Click to view&#41;
+          ul.small-block-grid-4.sites
+            li
+              a(href="img/db1.png")
+                img.preview.glow(src="img/db1_mini.jpg" alt="Downbeat Pic 1")
+            li
+              a(href="img/db2.png")
+                img.preview.glow(src="img/db2_mini.jpg" alt="Downbeat Pic 2")
+            li
+              a(href="img/db3.png")
+                img.preview.glow(src="img/db3_mini.jpg" alt="Downbeat Pic 3")
       div.modalDialog#openModal1
         div
           a.close(href="#close")x
