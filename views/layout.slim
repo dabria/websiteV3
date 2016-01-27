@@ -16,13 +16,6 @@ html
     script(src="js/jquery.js")
     script(src="js/main.js")
   body
-    .IEsucks
-      img(src="http://i.pgu.me/7Myrlgsq_original.png")
-      .text
-        h1 Hold it right there!
-        p I noticed you're using Internet Explorer, or you have Javascript disabled.
-        p I'm afraid my site isn't optimized for you. My site is best viewed in Firefox, Chrome, or Safari with Javascript enabled.
-        h5 Thanks!
     .everything
       == yield
 
@@ -34,42 +27,3 @@ html
 
     ga('create', 'UA-49659451-1', 'melissapage.ca');
     ga('send', 'pageview');
-
-
-    var IE = (function () {
-        "use strict";
-
-        var ret, isTheBrowser,
-            actualVersion,
-            jscriptMap, jscriptVersion;
-
-        isTheBrowser = false;
-        jscriptMap = {
-            "5.5": "5.5",
-            "5.6": "6",
-            "5.7": "7",
-            "5.8": "8",
-            "9": "9",
-            "10": "10"
-        };
-        jscriptVersion = new Function("/*@cc_on return @_jscript_version; @*/")();
-
-        if (jscriptVersion !== undefined) {
-            isTheBrowser = true;
-            actualVersion = jscriptMap[jscriptVersion];
-        }
-
-        ret = {
-            isTheBrowser: isTheBrowser,
-            actualVersion: actualVersion
-        };
-
-        return ret;
-    }());
-
-    $('.IEsucks').hide();
-
-    if (IE.isTheBrowser) {
-        $('.IEsucks').show();
-        $('.everything').hide();
-    }
