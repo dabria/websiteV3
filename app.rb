@@ -33,7 +33,7 @@ class Portfolio < Sinatra::Base
     slim :home
   end
 
-  get '/websites' do
+  get '/projects' do
     @page = "websites"
     slim :websites
   end

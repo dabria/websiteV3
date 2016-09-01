@@ -7,6 +7,8 @@ body
   max-height: 100%
   h3
     font-family: 'Alef', sans-serif
+  h2
+    font-family: 'Sanchez', serif
   p
     font-family: 'Duru Sans', sans-serif
     color: #333
@@ -100,10 +102,12 @@ body
       font-style: italic
       padding: 10px
   .row.process.sub
-    padding-top: 40px
+    padding-top: 20px
+    padding-bottom: 0px
     .links
       margin-bottom: -40px
       .btn-wrapper
+        margin-top: 15px
         text-align: center
         .button-group
           padding: 0 0.781em
@@ -123,6 +127,10 @@ body
             background: #647e49
     .website-holder
       text-align: center
+      border-top: 4px solid $grey
+      padding-top: 20px
+      h2
+        padding-bottom: 15px
       a
         @media screen and (max-width: 770px)
           font-size: 0.9em
@@ -185,8 +193,8 @@ body
         .gallery
           display: inline-block
           img
-            width: 200px
-            height: 200px
+            width: 150px
+            height: 150px
             margin: 15px
           .webcaption
             text-align: center
@@ -201,12 +209,28 @@ body
       .small-8.resizer
         @media screen and (max-width: 840px)
           width: 100%
+    .android-holder
+      border-top: none
+      padding-top: 0px
+      padding-bottom: 0px
+      p
+        text-align: justify
+      .apppreview
+        width: 30%
+        margin-top: 20px
+        padding: 7px
+        border-radius: 0.313em
+        @media screen and (max-width: 800px)
+          display: block
+          margin: 0 auto
+          width: 40%
     .website-blurb
       .small-4.resizer2
         @media screen and (max-width: 840px)
           width: 100%
           padding-top: 30px
     .aboutme-holder
+      padding-top: 35px
       .small-9.resizer3
         @media screen and (max-width: 650px)
           width: 100%
