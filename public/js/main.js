@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  $('.hamburger').click(function() {
+    $('#hamburger-items').toggle();
+  });
+
+  /* Mess of transitions, can probably replace these */
+
   $('.websites').hover(
     function() {
       $('.heading').removeClass('heading-unhover');

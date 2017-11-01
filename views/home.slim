@@ -1,10 +1,19 @@
 .row.heading
   .small-12.columns.nav-holder
     nav
-      a.websites(href="/projects") Projects
+      a.hamburger()
+        i.fa.fa-bars
+      ul#hamburger-items
+        li.hamburger-item
+          a(href="/projects")Projects
+        li.hamburger-item
+          a(href="/about")About me
+        li.hamburger-item
+          a(href="https://medium.com/@dabriaa")Blog
+      a.websites(href="/projects")Projects
       / a.art(href="/artwork")Artwork
       a.about(href="/about")About me
-      / a.blog(href="https://medium.com/@dabriaa")Blog
+      a.blog(href="https://medium.com/@dabriaa")Blog
     h1
       span#logo Melissa Page
     img(alt="M. Page Works" src="/img/logo.png")
