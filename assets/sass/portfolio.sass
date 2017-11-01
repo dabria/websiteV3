@@ -25,6 +25,8 @@ body
     .nav-holder
       width: 100%
       text-align: center
+      @media screen and (max-width: 818px)
+        padding-top: 10px
       nav
         padding-top: 25px
         position: relative
@@ -36,27 +38,45 @@ body
           border-radius: 5px
           font-size: 24px
         a.websites
-          left: 15%
+          left: 2%
           margin: 0 10px
           @media screen and (max-width: 1050px)
-            left: 5%
+            left: 1%
           @media screen and (max-width: 818px)
             font-size: 1.3em
           @media screen and (max-width: 635px)
             font-size: 1em
           @media screen and (max-width: 540px)
-            left: 1%
-          @media screen and (max-width: 446px)
             left: 0.1%
+          @media screen and (max-width: 446px)
+            left: 0.01%
             margin-left: -10px
             font-size: 0.9em
             margin-top: 5px
           @media screen and (max-width: 380px)
             font-size: 0.7em
             left: 5px
+        a.blog
+          left: 17%
+          margin: 0 10px
+          @media screen and (max-width: 818px)
+            font-size: 1.3em
+          @media screen and (max-width: 635px)
+            font-size: 1em
+          @media screen and (max-width: 540px)
+            left: 4%
+          @media screen and (max-width: 446px)
+            left: 0.3%
+            margin-left: -10px
+            font-size: 0.9em
+            margin-top: 5px
+          @media screen and (max-width: 380px)
+            font-size: 0.7em
+            left: 10px
+
         a.about
           right: 15%
-          margin: 5px 10px 0
+          margin: 0 10px
           @media screen and (max-width: 1050px)
             right: 5%
           @media screen and (max-width: 818px)
